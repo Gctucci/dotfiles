@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+Empty model docstring
+Creation Date:
+Last Modified:
+"""
+__author__ = "Gabriel Coutinho Natucci"
+__copyright__ = ""
+__credits__ = []
+__license__ = "MIT"
+__version__ = "1.0"
+__maintainer__ = "Gabriel Coutinho Natucci"
+__email__ = ""
+__status__ = "Development"

@@ -1,0 +1,13 @@
+nvm use stable --defaultse insert the dommit with the following title
+#[ticketID][bugID][ABC][topicID]: Title Message
+#ticketID - id of the item in the task repository
+#bugID - id of the hub item correspondent on the bug tracker ID
+#ABC - Add, Mod(ify), Ref(actoring), Fix, Rem(ove) and Rea(dability)
+#ABC Examples:
+#Add: New function to rule the world
+#Mod: Add women factor in Domination.ruleTheWorld()
+#Ref: Extract empathy stuff to an abstract class
+#Fix: RUL-42 or #42 Starvation need to be initialised to avoid bug
+#Rem: freeSoeech is not used anymore
+#Rea: Removed old TODO and extra space in header
+#topicID - job selector for jenkins and/or branch name and/or topic name for agent
