@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dir=~/dotfiles
-files="vimrc"
+files=".vimrc"
 # Install git
 if ! which git > /dev/null; then
    echo "Installing git..."
@@ -37,7 +37,7 @@ fi
 cd $dir
 for file in $files; do
   echo "Creating symlink to $file in home directory..."
-  ln -s $dir/$file ~/.$file
+  ln -s $dir/$file ~/$file
 done
 echo "Installing Vundle..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -47,7 +47,7 @@ ln -s molokai/colors ~/.vim/colors
 echo "Installing Vundle plugins..."
 vim +PluginInstall +qall
 echo "Compiling youCompleteMe package"
-cd ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/bundle/youcompleteme
 sudo ./install.py --all
 echo "Finished installing dependencies!"
 echo "Setting Vim as default visual editor for all applications...."

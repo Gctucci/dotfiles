@@ -1,4 +1,4 @@
-nvm use stable --defaultse insert the dommit with the following title
+Please insert the commit with the following title
 #[ticketID][bugID][ABC][topicID]: Title Message
 #ticketID - id of the item in the task repository
 #bugID - id of the hub item correspondent on the bug tracker ID
