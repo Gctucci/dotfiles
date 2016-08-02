@@ -28,7 +28,13 @@ Plugin 'tomasr/molokai'
 Plugin 'valloric/youcompleteme'
 "Javascript config
 Plugin 'pangloss/vim-javascript'
+"Latex features
+Plugin 'lervag/vimtex'
+"Autoclose brackets
+Plugin 'townk/vim-autoclose'
+" Highlight trailing space
 Plugin 'bronson/vim-trailing-whitespace'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
