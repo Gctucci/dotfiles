@@ -23,7 +23,7 @@ if [ -d "~/.vim" ] ; then
 
 else
   echo "Creating vim folder"
-  sudo mkdir "~/.vim"
+  sudo mkdir $HOME/.vim
 fi
 
 if [ -d "~/.vim/bundle" ] ; then
@@ -31,13 +31,13 @@ if [ -d "~/.vim/bundle" ] ; then
 
 else
   echo "Creating vim bundle folder..."
-  sudo mkdir "~/.vim/bundle"
+  sudo mkdir $HOME/.vim/bundle
 fi
 # Change to dotfiles directory
 cd $dir
 for file in $files; do
   echo "Creating symlink to $file in home directory..."
-  ln -s $dir/$file ~/$file
+  ln -s $dir/$file $HOME/$file
 done
 echo "Installing Vundle..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -50,6 +50,26 @@ echo "Compiling youCompleteMe package"
 cd ~/.vim/bundle/youcompleteme
 sudo ./install.py --all
 echo "Finished installing dependencies!"
+echo "Installing customized fonts for Vim..."
+if [ -d "~/.fonts" ] ; then
+  echo "Fonts folder already present!"
+
+else
+  echo "Creating fonts folder"
+  sudo mkdir $HOME/.fonts
+fi
+echo "Copying fonts file to fonts folder..."
+sudo cp PowerlineSymbols.otf $HOME/.fonts/
+sudo fc-cache -vf $HOME/.fonts/
+if [ -d "~/.config/fontconfig" ] ; then
+  echo "Fonts config folder already present!"
+
+else
+  echo "Creating fontsconfig folder"
+  sudo mkdir $HOME/.config/fontconfig
+  sudo mkdir $HOME/.config/fontconfig/conf.d
+fi
+sudo cp 10-powerline-symbols.conf $HOME/.config/fontconfig/conf.d/
 echo "Setting Vim as default visual editor for all applications...."
 export VISUAL=vim
 export EDITOR="$VISUAL"
