@@ -15,6 +15,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 " Static checking for multiple languages
 Plugin 'scrooloose/syntastic'
+" Markdown syntax highlighting
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 " Fuzzy finder
 Plugin 'kien/ctrlp.vim'
 "Custom tab config
