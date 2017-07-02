@@ -25,7 +25,7 @@ Plugin 'vim-airline/vim-airline-themes'
 "Vim Theme
 Plugin 'tomasr/molokai'
 "Autocomplete
-Plugin 'valloric/youcompleteme'
+"Plugin 'valloric/youcompleteme'
 "Javascript config
 Plugin 'pangloss/vim-javascript'
 "Latex features
@@ -80,6 +80,7 @@ set encoding=utf-8
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+
 
 "Better window navigation
 nnoremap <silent> <C-Right> <c-w>l
